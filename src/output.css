@@ -22,7 +22,6 @@
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
->>>>>>> main
     --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-slate-700: oklch(37.2% 0.044 257.287);
     --color-white: #fff;
@@ -50,7 +49,6 @@
     --radius-xl: 0.75rem;
     --radius-2xl: 1rem;
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
->>>>>>> main
     --radius-xl: 0.75rem;
     --radius-2xl: 1rem;
     --radius-4xl: 2rem;
@@ -154,7 +152,6 @@
   }
   img, svg, video, canvas, audio, iframe, embed, object {
     display: block;
-    vertical-align: middle;
   }
   img, video {
     max-width: 100%;
@@ -1487,8 +1484,6 @@
       --tw-rotate-y: rotateY(calc(30deg * -1));
       transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
     }
-  }
-}
 .inside-text {
   height: calc(var(--spacing) * 30);
   overflow-y: auto;
