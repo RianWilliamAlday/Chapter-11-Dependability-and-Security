@@ -61,6 +61,161 @@
   }
 }
 
+@theme {
+  --animate-gradient: gradientMove 5s ease infinite;
+  @keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 10px #7ed6df; }
+  50% { box-shadow: 0 0 20px #2b7fff; }
+}
+
+@keyframes zoom-in {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+
+@keyframes fade-in-down {
+  0% { opacity: 0; transform: translateY(-15px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+
+.clr-body {
+  @apply bg-secondary font-playfair flex flex-col items-center justify-center px-8 py-20 space-y-10;
+  animation: fade-in-up 0.8s ease-in-out;
+}
+
+
+.under-clr-title {
+  @apply text-center text-4xl md:text-5xl font-bebasneue text-white bg-tertiary 
+  p-4 rounded-xl shadow-lg underline decoration-section hover:scale-105 transition duration-300;
+  animation: zoom-in 1s ease-in-out;
+}
+
+.sec-p {
+  @apply p-8 text-primary bg-section border-2 border-tertiary rounded-xl m-10 shadow-lg text-center;
+  animation: fade-in-up 1s ease-in-out;
+}
+
+.sec-p2 {
+  @apply p-10 text-white font-bebasneue border-4 border-dashed border-tertiary bg-primary 
+  rounded-xl m-10 text-center shadow-md;
+  animation: fade-in-up 1s ease-in-out;
+}
+
+.arc1p {
+  @apply space-y-6 text-primary leading-relaxed;
+}
+
+.arc-1-p,
+.arc-1-p2,
+.arc-1-p3 {
+  @apply p-6 border border-tertiary rounded-xl text-primary text-center m-10 transition hover:bg-additional hover:text-white;
+}
+
+
+
+.priciple-p {
+  @apply text-xl italic text-primary bg-additional text-center p-5 rounded-2xl border border-primary shadow-md;
+}
+
+.img-adjust {
+  @apply flex flex-wrap justify-center gap-4 transition duration-300 hover:scale-105;
+  animation: fade-in-up 1.2s ease-in-out;
+}
+
+.fgure11 {
+  @apply text-center italic mt-2 text-slate-700;
+}
+
+
+.grid-section-clyde {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 m-10;
+}
+
+.navbar-clyde {
+  @apply bg-primary text-white p-3 text-center sticky top-0 z-50 m-3 rounded-xl shadow-md font-bebasneue;
+  animation: fade-in-down 0.8s ease-in-out;
+}
+
+.navbar-text-clyde {
+  @apply inline-block px-4 py-2 text-lg hover:text-blue-500 hover:scale-110 transition-all duration-200 ease-in-out;
+}
+
+.grid-card {
+  @apply bg-section border border-tertiary p-6 rounded-xl shadow-md text-primary text-center 
+  hover:scale-105 hover:bg-additional hover:text-white transition duration-300;
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+.grid-text {
+  @apply font-bold text-lg;
+}
+
+
+.dependability-p {
+  @apply p-10 text-white font-bold border-4 border-dashed border-tertiary m-10 text-center bg-primary rounded-md shadow-md font-playfair;
+}
+
+.headsub-title {
+  @apply bg-additional border-l-4 border-primary p-6 m-10 rounded-md shadow-sm text-primary leading-relaxed text-justify italic;
+}
+
+.subsec-title {
+  @apply text-3xl text-primary underline decoration-additional mt-16 mb-8 text-center font-bebasneue;
+}
+
+.footer-1 {
+  @apply bg-tertiary text-white text-center p-4 rounded-t-xl shadow-md font-bebasneue tracking-wide;
+}
+
+
+.def-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-6 m-8;
+}
+
+.def-grid-item {
+  @apply bg-section border-l-4 border-primary p-5 rounded-lg shadow-md hover:bg-additional hover:text-white transition duration-300;
+}
+
+.summary-p {
+  @apply bg-primary border border-primary p-6 m-10 rounded-md shadow-md text-white leading-relaxed italic text-xl;
+}
+
+.detail-p {
+  @apply leading-relaxed text-justify m-8 p-6 bg-section italic rounded-md shadow-sm font-playfair;
+}
+
+.todo-list {
+  @apply list-decimal list-inside bg-primary border border-blue-300 p-6 m-10 rounded-md shadow-sm;
+}
+
+.todo-item {
+  @apply text-additional mb-3 text-base leading-relaxed;
+}
+
+.closing-p {
+  @apply italic bg-additional p-6 m-10 text-white rounded-md shadow-md text-justify font-playfair;
+} 
+
 .figure-text{
     @apply text-center font-bold font-playfair animate-bounce;
 }
@@ -139,6 +294,203 @@
 .active {
     @apply underline;
 }
-.exercise-test{
-    @apply  transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 delay-500;
+
+.bg {
+  @apply 
+  bg-gradient-to-r 
+  from-secondary 
+  via-tertiary 
+  to-additional 
+  bg-[length:200%_200%] 
+  animate-gradient;
+}
+
+.heading {
+  @apply 
+  text-center 
+  text-white 
+  font-bold 
+  p-5 
+  mt-5 
+  mb-5 
+  ml-20 
+  mr-20 
+  rounded-xl 
+  px-10 
+  shadow-2xl 
+  text-sm 
+  lg:text-2xl 
+  xl:text-3xl 
+  font-bebasneue
+  bg-gradient-to-r 
+  from-tertiary 
+  to-blue-400 
+  transition 
+  duration-500 
+  ease-in-out 
+  hover:scale-110 
+  hover:shadow-[0_0_25px_var(--color-glow)]
+  border-2
+  border-white/20
+  backdrop-blur-md;
+}
+
+.sec1, .sec2, .sec3, .sec4 {
+  @apply 
+  bg-[var(--color-glass)] 
+  backdrop-blur-lg 
+  font-playfair 
+  text-justify 
+  p-6 
+  mt-5 
+  mb-5 
+  mx-20 
+  rounded-2xl 
+  shadow-lg 
+  border 
+  border-white/20 
+  hover:shadow-[0_0_15px_rgba(0,198,255,0.5)]
+  transition-all 
+  duration-300;
+}
+
+.img1, .img2, .img3, .img4 {
+  @apply 
+  flex 
+  flex-wrap 
+  justify-center 
+  gap-6 
+  scale-95 
+  hover:scale-100 
+  transition-transform 
+  duration-500 
+  ease-in-out 
+  p-2
+  animate-pulse
+}
+
+.b1, .b2, .b3, .b4 {
+  @apply 
+  text-center 
+  font-bebasneue 
+  font-bold 
+  rounded-xl 
+  px-4 
+  py-2 
+  text-[16px] 
+  lg:text-[18px] 
+  xl:text-[20px] 
+  text-white 
+  bg-gradient-to-r 
+  from-tertiary 
+  to-blue-500 
+  shadow-lg 
+  transition-transform 
+  duration-300 
+  ease-in-out 
+  hover:-translate-y-1 
+  hover:scale-110 
+  hover:shadow-[0_0_20px_var(--color-glow)]
+  underline 
+  decoration-solid 
+  decoration-2 
+  underline-offset-4;
+}
+
+.grid {
+  @apply 
+  grid 
+  grid-cols-1 
+  sm:grid-cols-2 
+  gap-6;
+}
+
+.button {
+  @apply 
+  text-center 
+  bg-gradient-to-r 
+  from-tertiary 
+  via-blue-400 
+  to-additional 
+  bg-[length:200%_200%]
+  animate-gradient 
+  font-bold 
+  font-bebasneue 
+  my-5 
+  py-3 
+  mx-10 
+  cursor-pointer 
+  transition 
+  duration-500 
+  hover:scale-110 
+  hover:shadow-[0_0_25px_var(--color-glow)]
+  rounded-xl 
+  border 
+  border-white/30 
+  shadow-lg 
+  text-white 
+  uppercase
+  animate-wiggle;
+}
+
+.bgfooter {
+  @apply 
+  text-center
+  text-white
+  text-[16px]
+  sm:text-[18px]
+  md:text-[20px]
+  lg:text-[22px]
+  font-semibold
+  text-shadow-lg
+  bg-[url('/Images/background.jpg')]
+  bg-cover
+  bg-center
+  bg-fixed
+  bg-blend-multiply
+  from-tertiary/60
+  to-blue-400/60
+  bg-gradient-to-t
+  pt-3
+  pb-3
+  border-t
+  border-white/30
+  backdrop-blur-sm
+  shadow-inner;
+}
+
+#p4 { 
+  @apply 
+  font-bold; 
+}
+
+.foot1 { 
+  @apply 
+  italic; 
+}
+
+#p5 { 
+  @apply 
+  font-bold 
+  text-[18px] 
+  animate-bounce; 
+}
+
+.marosemain {
+  @apply bg-[#157aea] p-4 rounded-lg shadow-md text-2xl text-center text-white text-shadow-lg/30  font-serif opacity-80 hover:opacity-100 transition-opacity;
+}
+.marosetitle {
+  @apply text-base bg-[#4e9eb1] rounded-xl p-20 max-w-5xl mx-auto space-y-8 font-serif outline-offset-2 transition-colors duration-300 hover:bg-blue-300 hover:scale-95 transition-transform duration-100;
+
+}
+.marosebody {
+  @apply text-2xl font-serif text-shadow-lg/30 bg-blue-200;
+}
+
+.marosebody2 {
+  @apply text-base bg-[#4e9eb1] rounded-xl p-20 max-w-6xl mx-auto space-y-3 font-serif outline-offset-2 hover:scale-95 transition-transform duration-100 transition-colors duration-300 hover:bg-blue-300;
+}
+
+.footer-config{
+    @apply bg-[#157aea] text-center text-[20px] text-white text-shadow-lg;
 }
