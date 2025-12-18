@@ -2,6 +2,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import "tailwindcss";
 
+#marose .marosemain {
+  @apply bg-[#157aea] p-4 rounded-lg shadow-md text-2xl text-center text-white text-shadow-lg/30  font-serif opacity-80 hover:opacity-100 transition-opacity;
+}
+#marose .marosetitle {
+  @apply text-base bg-[#4e9eb1] rounded-xl p-20 max-w-5xl mx-auto space-y-8 font-serif outline-offset-2 transition-colors duration-300 hover:bg-blue-300 hover:scale-95 transition-transform duration-100;
+
+}
+#marose .marosebody {
+  @apply text-2xl font-serif text-shadow-lg/30 bg-blue-200;
+}
+
+#marose .marosebody2 {
+  @apply text-base bg-[#4e9eb1] rounded-xl p-20 max-w-6xl mx-auto space-y-3 font-serif outline-offset-2 hover:scale-95 transition-transform duration-100 transition-colors duration-300 hover:bg-blue-300;
+}
+
+#marose .navbar {
+    @apply bg-black text-white p-2 text-center sticky top-0 z-50 p-3 m-3 rounded-xl shadow-md rounded-xl shadow-md lg:m-0 font-serif overflow-auto;
+}
+#marose .navbar-text {
+    @apply hover:text-blue-500 hover:scale-125 pl-[16px] pr-[16px] overflow-auto hover:animate-pulse overflow-auto;
+}
+#marose .active {
+    @apply underline;
+}
+
+#marose .footer-config{
+    @apply bg-[#157aea] text-center text-[20px] text-white text-shadow-lg;
+}
+
 @theme {
   --color-primary: #333333;
   --color-secondary: #bedbff;
@@ -11,7 +40,7 @@
 }
 
 @theme {
-  --font-playfair: "Playfair Display", sans-serif;git push origin main:mainTo https://github.com/clydejustin1117/Chapter-11-Dependability-and-Security.git! [rejected]        main -> main (non-fast-forward)error: failed to push some refs to 'https://github.com/clydejustin1117/Chapter-11-Dependability-and-Security.git'hint: Updates were rejected because the tip of your current branch is behindhint: its remote counterpart. If you want to integrate the remote changes,hint: use 'git pull' before pushing again.hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+  --font-playfair: "Playfair Display", sans-serif;
   --font-bebasneue: "Bebas Neue", sans-serif;
 }
 
@@ -169,8 +198,7 @@
 .footer-1 {
   @apply bg-tertiary text-white text-center p-4 rounded-t-xl shadow-md font-bebasneue tracking-wide;
 }
-  --color-additional: #54a0ff; 
-}
+  
 @theme {
     --font-playfair: "Playfair Display", sans-serif;
     --font-bebasneue: "Bebas Neue", sans-serif;
