@@ -5,23 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="src/output.css">
 </head>
 
-<body>
+<body class="bg">
 
     <main>
 
-        <section>
+    <div class="navbar">
+        <a class="navbar-text" href="Index.html">Home</a>
+        <a class="navbar-text" href="Introduction.html">Introduction</a>
+        <a class="navbar-text" href="chapter 11.1.html">Dependability properties</a>
+        <a class="active navbar-text" href="11.2.html">Cost/dependability curve</a>
+        <a class="navbar-text" href="11.3 safety.html">Safety</a>
+        <a class="navbar-text" href="11.4 - Security.html">Security</a> 
+    </div>
 
-            <img src="Screenshot 2025-09-03 111732.png" alt="Figure 11.2">
-            <p>Figure 11.2 Cost/dependability curve</p>
-            
-        </section>
+        <h2 class="heading">AVAILABILITY AND RELIABILITY</h2>
 
-        <section>
-
-            <h2>Availability and reliability</h2>
-
+        <section class="sec1">
+        <div class="img1">
+            <img src="Screenshot 2025-10-07 100929.png" alt="Figure 11.2">
+        </div>
+            <p class="b1">Figure 11.2 Cost/dependability curve</p>
             <p>System availability and reliability are closely related properties that can both be expressed as numerical
             probabilities. The availability of a system is the probability that the system will be up and running to
             deliver these services to users on request. The reliability of a system is the probability that the system’s
@@ -41,23 +47,16 @@
             can be done very quickly and phone users may not even notice that a failure has occurred. Furthermore, even
             if a call is interrupted, the consequences are usually not serious. Therefore, availability rather than
             reliability is the key dependability requirement for this type of system.</p>
-            <p>System reliability and availability may be defined more precisely as follows:</p>
 
-        </section>
-
-        <section>
+             <p>System reliability and availability may be defined more precisely as follows:</p>
 
             <ol>
-                <li><i>Reliability</i> The probability of failure-free operation over a specified time, ina given
+                <li>Reliability The probability of failure-free operation over a specified time, ina given
                     environment, for a specific purpose. Cost Low Medium High Very High Ultra-High Dependability Figure
                     11.2 Cost/dependability curve 296</li>
-                <li><i>Availability</i> The probability that a system, at a point in time, will be operational and able
+                <li>Availability The probability that a system, at a point in time, will be operational and able
                     to deliver the requested services.</i>
             </ol>
-
-        </section>
-
-        <section>
 
             <p>One of the practical problems in developing reliable systems is that our intuitive notions of reliability
                 and availability are sometimes broader than these limited definitions. The definition of reliability
@@ -95,15 +94,17 @@
                 significant. If a system is unavailable for an hour each day between 3 am and 4 am, this may not affect
                 many users. However, if the same system is unavailable for 10 minutes during the working day, system
                 unavailability will probably have a much greater effect.</p>
-
+            
         </section>
 
-        <!--Table-->
 
-        <section>
+        <section class="sec2">
 
-            <img src="Screenshot 2025-09-03 095604.png" alt="Figure 11.3">
-            <p>Figure 11.3 Reliability terminology</p>
+            <div class="img2">
+                <img src="Screenshot 2025-09-03 095604.png" alt="Figure 11.3">
+            </div>
+            <p class="b2">Figure 11.3 Reliability terminology</p>
+
             <p>System reliability and availability problems are mostly caused by system failures. Some of these failures
                 are a consequence of specification errors or failures in other related systems such as a communications
                 system. However, many failures are a consequence of erroneous system behavior that derives from faults
@@ -126,14 +127,15 @@
                 someone else’s mode of working (Figure 11.5). In Figure 11.5, the set of erroneous inputs correspond to
                 the ellipse labeled Ie in Figure 11.4. The set of inputs produced by User 2 intersects with this
                 erroneous input set. User 2 will</p>
-
+        
         </section>
+    
+        <section class="sec3">
 
-        <section>
-
-            <img src="Screenshot 2025-09-03 101008.png" alt="Figure 11.4">
-            <p>Figure 11.4 A system as an input/outputmapping therefore experience some system failures. User 1 and User
-                3, however, never use inputs from the erroneous set. For them, the software will always be reliable.</p>
+            <div class="img3">
+                <img src="Screenshot 2025-09-03 101008.png" alt="Figure 11.4">
+            </div>
+            <p class="b3">Figure 11.4 A system as an input/outputmapping</p>
             <p>The practical reliability of a program depends on the number of inputs causing erroneous outputs
                 (failures) during normal use of the system by most users. Software faults that only occur in exceptional
                 situations have little practical effect on the system’s reliability. Consequently, removing software
@@ -144,17 +146,23 @@
             <p>System faults do not always result in system errors and system errors do not necessarily result in system
                 failures. The reasons for this are as follows:</p>
 
-            <ol>
                 <li>Not all code in a program is executed. The code that includes a fault (e.g., the failure to
                     initialize a variable) may never be executed because of the way that the software is used.</li>
+                    
+        </section>
+
+         <section class="sec4">
+               
+            <div class="img4">
                 <img src="Screenshot 2025-09-03 102143.png" alt="Figure 11.5">
-                <p>Figure 11.5</p>
+            </div>
+                <p class="b4">Figure 11.5 Software usage patterns</p>
                 <li>Errors are transient. A state variable may have an incorrect value caused by the execution of faulty
                     code. However, before this is accessed and causes a system failure, some other system input may be
                     processed that resets the state to a valid value.</li>
                 <li>The system may include fault detection and protection mechanisms. These ensure that the erroneous
                     behavior is discovered and corrected before the system services are affected.</li>
-            </ol 
+
             <p>Another reason why the faults in a system may not lead to system failures is that, in practice,
             users adapt their behavior to avoid using inputs that they know cause program failures. Experienced users
             ‘work around’ software features that they have found to be unreliable. For example, I avoid certain
@@ -162,20 +170,20 @@
             used auto-numbering, it often went wrong. Repairing the faults in unused features makes no practical
             difference to the system reliability. As users share information on problems and work-arounds, the effects
             of software problems are reduced.</p>
+
             <p>The distinction between faults, errors, and failures, explained in Figure 11.3, helps identify three
                 complementary approaches that are used to improve the reliability of a system:</p>
 
-            <ol>
-                <li><i>The distinction</i> between faults, errors, and failures, explained in Figure 11.3, helps
+
+                <li>The distinction between faults, errors, and failures, explained in Figure 11.3, helps  
                     identify three complementary approaches that are used to improve the reliability of a system:</li>
-                <li><i>Fault detection and removal</i> The use of verification and validation techniques that increase
+                <li>Fault detection and removal The use of verification and validation techniques that increase
                     the chances that faults will be detected and removed before the system is used. Systematic testing
                     and debugging is an example of a faultdetection technique.</li>
-                <li><i>Fault tolerance</i> These are techniques that ensure that faults in a system do not result in
+                <li>Fault tolerance These are techniques that ensure that faults in a system do not result in
                     system errors or that system errors do not result in system failures. The incorporation of
                     self-checking facilities in a system and the use of redundant system modules are examples of fault
                     tolerance techniques.</li>
-            </ol>
 
             <p>The practical application of these techniques is discussed in Chapter 13, which covers techniques for
                 dependable software engineering.</p>
@@ -185,5 +193,35 @@
     </main>
 
 </body>
+    
+        <article class="grid">
+            <div class="button"><a href="chapter 11.1.html">PREVIOUS</a></div>
+            <div class="button"><a href="11.3 safety.html">NEXT</a></div>
+        </article>
+
+    <footer>
+
+        <section class="bgfooter">
+
+            <article>
+                <div>
+                <p id="p4">End of Chapter 11 - 11.2 Availability and reliability</p>
+                </div>
+                
+            <ol class="foot1">
+                <p>Figure 11.2 Cost/dependability curve</p>  
+                <p>Figure 11.3 Reliability terminology</p>   
+                <p>Figure 11.4 A system as an input/outputmapping</p> 
+                <p>Figure 11.5 Software usage patterns</p>
+            </ol>         
+            </article>
+
+            <article>
+                <p id="p5">CREATED BY SHERWIN LLOYD G. BENDAÑA</p>
+            </article>
+
+        </section>
+
+    </footer>
 
 </html>
